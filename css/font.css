@@ -1,0 +1,24 @@
+@font-face {
+    /* ProximaNova */
+    font-family: "ProximaNova Bold"; 
+    /*  адрес шрифта и тип BOLD */
+    src: url("../font/proximanova_bold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+    /*  адрес шрифта и тип REGULAR  */
+    /* src: url("../font/proximanova_regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;  */
+    } 
+    
+    @font-face {
+        /* ProximaNova */
+        font-family: "ProximaNova Regular"; 
+         /* адрес шрифта и тип REGULAR   */
+        src: url("../font/proximanova_regular.ttf") format("truetype"); 
+        font-style: normal; 
+        font-weight: normal; 
+        } 
+    
+
+    

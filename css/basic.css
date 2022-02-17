@@ -1,0 +1,49 @@
+
+body {
+    font-family: "ProximaNova Bold";
+    font-size: 15px;
+    font-style: normal;
+    margin: 0;
+
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* border: 1px white solid; */
+  
+  position: relative;
+}
+
+/* @media (max-width: 1230px) {
+  .container {
+    padding: 0 45px;
+  }
+} */
+
+.main {
+    overflow: hidden;
+}
+
