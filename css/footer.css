@@ -1,8 +1,9 @@
+
+/* сделал его на всю ширину */
 .footer {
   height: 69px;
-  width: 100%;
 
-  background: url(../img/footer/fon.png) center no-repeat;
+  background: url(../img/footer/fon.png) center repeat;
 }
 
 .footer__inner {
@@ -62,31 +63,31 @@
   }
 }
 
-@media (max-width: 575px){
-.footer__time,
-.footer__author {
-  display: none;
-}
+@media (max-width: 575px) {
+  .footer__time,
+  .footer__author {
+    display: none;
+  }
 
-.footer__logo {
-  margin: 0;
- 
-}
+  .footer__logo {
+    margin: 0;
 
-.footer__inner {
-  justify-content: center;
-}
+  }
+
+  .footer__inner {
+    justify-content: center;
+  }
 
   .footer__logo__text {
     font-size: 23px;
   }
 
   .footer__logo__text::after {
-    
+
     width: 44px;
     height: 3px;
-    
+
     bottom: 14px;
     left: 30px;
-    
+  }
 }

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- таб (отступ слева) в 4 пробела - ужас (имхо) -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOODER</title>
+
+<!-- под стили лучше сделать 1 файл, где импортируются все стили и здесь указать только один импорт (main.css у тебя даже есть, можно в него) -->
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -20,14 +24,22 @@
 
     <header class="header" id="header">
 
+<!-- Что-то с названиями классов, вообще лучше сразу делать стили на scss (sass),
+     вложенность удобная штука. + много других удобных штук -->
         <div class="heder__inner activ" id="heder__iner">
+
+<!-- контент хедера нужно ограничить по ширине. Отдали страницу через zoom и поймешь.
+     Лучше сделать общий класс (например container, с максимальной шириной и использовать потом в блоках) -->
             <nav class="nav">
 
                 <div class="header__menu">
+                    <!-- если это не button, то это не button. type лишнее и бесполезное -->
                     <div class="menu__btn" type="button">
                         <span class="menu__item">
                             <span></span>
                         </span>
+                        <!-- немного странно что это внутри кнопки и делает совершенно другое
+                        (кликаешь на меню, а тебя куда-то перекидывает, может так и надо, чисто вопрос к UX) -->
                         <a class="nav__link menu" href="#">Menu</a>
                     </div>
 
@@ -84,6 +96,7 @@
 
 
                         <div class="intro__decor__ellipse">
+                            <!-- вообще их заверстать скорей всего нужно, просто кружки -->
                             <img class="ellipse" src="./img/Эллипс светлый.png" alt="">
                             <img class="ellipse" src="./img/Эллипс 2.png" alt="">
                             <img class="ellipse" src="./img/Эллипс 2.png" alt="">
@@ -101,11 +114,13 @@
                             <p data-scroll="#products"> Learn More</p>
                             <div class="btn__arrow" data-scroll="#products"></div>
                         </a>
+                        <!-- вообще выглядит как ФУ, стрелка должна быть одной картинкой, без отдельных наконечников -->
                         <img class="intro__btn__arrow" data-scroll="#products" src="/img/стрелка в кнопке.png" alt="">
 
                         <div class="intro__scroll">
                             <img class="intro__scroll__img" src="../Проект WOODER/img/mouse61.png" alt="">
                             <img class="intro__scroll__arrow" src="./img/стрелка.png" alt="">
+                            <!-- этот костыль со стрелкой мне не особо нравится -->
                             <div class="arrow">.</div>
                             <p class="intro__scroll__text">scroll</p>
                         </div>
@@ -128,7 +143,9 @@
             <div class="container">
 
                 <div class="global__decor__F">F</div>
+                <!-- на такой текст нужно вешать стиль user-select: none; чтобы нельзя было курсором выделить -->
                 <div class="global__decor__Furniture">Furniture</div>
+                <!--  это тот же indent double, зачем position: absolute ? -->
                 <div class="global__decor__products">
                     <img src="./img/Products/1Products/Прямоугольник 17.png" alt="">
                 </div>
@@ -141,12 +158,14 @@
                         <div class="product__furniture__decor">
 
                             <div class="furniture__decor">
+                                <!-- это просто полоски одного цвета, можно и заверстать -->
                                 <img src="./img/Products/1Products/decorLong.png" alt=""
                                     class="product__furniture__decor1">
                                 <img src="./img/Products/1Products/decorSmall.png" alt=""
                                     class="product__furniture__decor2">
                             </div>
 
+                            <!-- лучше класс назвать как-нибудь "product__furniture__number / product__furniture__order" -->
                             <div class="product__furniture__decor3">
                                 <div>01</div>
                                 <div class="product__decor__point">.</div>
@@ -166,19 +185,24 @@
                             <a href="#" class="furniture__btn">
 
                                 <p class="furniture__btn__text">Learn more</p>
+<!-- опять 2 картинки, я так понимаю ты просто из фигмы брал, а там они разделены?
+Если дизайнер не тупой, то они должны были быть внутри какого-то контенера (слева список блоков в фигме), и просто берешь тот блок, внутри которого эти две картинки и скачиваешь -->
                                 <img src="./img/Products/1Products/arrow.png" alt="" class="furniture__btn__arrow">
                                 <img src="./img/Products/1Products/arrow2.png" alt="" class="furniture__btn__arrow2">
                             </a>
 
                         </div>
 
+                        <!-- если убрать див, то ничего не изменится, значит его можно убрать -->
                         <div class="product__furniture__img">
                             <img class="product__furniture__img" src="./img/Products/1Products/1Products.jpg" alt="">
                         </div>
 
                     </div>
 
+                    <!--  вообще можно сделать "indent" "indent revert" и применять как разделитель -->
                     <div class="indent">
+                        <!-- полоску можно и без картинки -->
                         <img class="indent__img" src="./img/Products/1Products/Прямоугольник 17.png" alt="">
                         <div class="indent__decor">D</div>
 
@@ -186,8 +210,10 @@
 
 
 
+                    <!--  какая-то лишняя обертка -->
                     <div class="product__double">
 
+                        <!-- лучше не double, а reverse -->
                         <div class="product__furniture double">
 
                             <div class="product__furniture__decor">
@@ -234,6 +260,7 @@
                         </div>
 
                     </div>
+
                     <div class="global__decor__decor">decor</div>
 
                     <div class="indent double">
@@ -241,12 +268,14 @@
                     </div>
 
 
+                    <!-- зачем эта обертка ? можно избавится от quality__inner, перенеся его стили в product__quality -->
                     <div class="product__quality">
 
                         <div class="quality__inner">
 
                             <div class="quality__inner__tittle">
                                 <h2 class="quality__tittle">wooder – is quality</h2>
+                                <!-- давай без картинок -->
                                 <img class="quality__img" src="./img/Products/quality/Прямоугольник 17.png" alt="">
                                 <div class="quality__subTittle">
                                     <p class="quality__subTittle"> We create unique design objects made of rare wood,
@@ -261,6 +290,7 @@
 
                                     <div class="video__item">
                                         <img class="video__item__img" src="./img/Products/quality/1video.png" alt="">
+                                        <!-- кнопка как будто не по центру -->
                                         <div class="video__item__play">
                                             <img class="item__play" src="./img/Products/quality/play.png" alt="">
                                         </div>
@@ -305,6 +335,7 @@
 
                                 </div>
 
+                                <!-- =ему не нужен z-index: 1? Обрезается нижним блоком -->
                                 <div class="global__decor__v">v</div>
 
                             </div>
@@ -323,6 +354,7 @@
 
                     <div class="watchVideo__inner">
 
+                        <!-- лишняя обертка -->
                         <div class="watchVideo__inner__decor">
 
                             <div class="watchVideo__decor">
@@ -354,6 +386,7 @@
 
                         </div>
 
+                        <!-- палка != картинка -->
                         <img class="watchVideo__global__decor" src="./img/watchVideo/whiteDecorVertical.png" alt="">
                     </div>
 
@@ -365,6 +398,8 @@
             <div class="container">
                 <div class="about__inner">
 
+                    <!-- лучше вместо "product__furniture__img" сделать общий класс shadowed-image, что-нибудь такое.
+                    В scss нужно такое накидывать внутри стилей через mixin -->
                     <div class="product__furniture__img about__img">
                         <img class="product__furniture__img" src="./img/about/about.png" alt="">
                     </div>
@@ -403,6 +438,7 @@
         </div>
     </main>
 
+<!--  -->
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">

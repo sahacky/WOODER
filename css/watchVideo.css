@@ -19,14 +19,15 @@
   border: 1px #bea67c solid;
 }
 
+.container__watchVideo .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .watchVideo__inner {
   display: flex;
-  justify-content: flex-start;
-  margin: auto;
-  height: 500px;
-  align-items: center;
-
-  height: 737px; /*max-height проверить при адаптиве*/
+  align-items: flex-start;
 }
 
 /*watchVideo__inner__decor*/
@@ -36,7 +37,7 @@
   flex-direction: column;
   align-items: flex-end;
   margin-left: 32px;
-  margin-bottom: 135px;
+  margin-top: 35px;
 }
 
 .watchVideo__decor__white {
@@ -173,8 +174,6 @@
 
   .watchVideo__inner {
     height: 260px;
-    padding-top: 208px;
-  
   }
 
   .watchVideo__inner__content {
@@ -190,7 +189,7 @@
     line-height: 19px;
     margin-bottom: 16px;
   }
-  
+
 
   .watchVideo__inner__content {
     margin: 0;
