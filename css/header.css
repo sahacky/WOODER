@@ -50,11 +50,15 @@
   left: 0;
   z-index: 1;
 
+  /* лучше не использовать all, safari скорей всего пошлет тебя нахер */
   transition: all 0.3s ease;
 }
 
 .menu__item span {
   display: block;
+  /* повтор одних и тех же цветов, лучше вынести в переменную и использовать
+  (тут css, так что через --textColor: red; color: var(--textColor)).
+  В scss используется $, кароч посмотришь */
   background: #bea67c;
   height: 1px;
   transition: all 0.3s ease;
@@ -80,11 +84,13 @@
 
 /*menu BURGER*/
 
+/* active и т.п. обычно ставят после блока, к которому относится */
 .nav__link__burger.active {
   transform: translate(0px, 0px);
 }
 
 .nav__link__burger {
+  /* переменные */
   color: #bea67c;
 
   font-size: 50px;
@@ -98,12 +104,16 @@
   position: absolute;
   top: 60px;
   left: -12px;
+  /* z-index: 1 здесь вполне достаточно). Потом может возникнуть ситуация,
+  что заебешься искать из-за чего не нажимается какой-то элемент */
   z-index: 50;
 
+  /* не надо all, у тебя один translate */
   transition: all 0.3s ease 0s;
   transform: translate(-100%, 0px);
 }
 
+/* кажется оно должно быть не здесь */
 .menu__item.active > span {
   transform: scale(0);
 }
@@ -159,10 +169,12 @@
   cursor: pointer;
 }
 
+/* что-то лишнее */
 .lang {
   color: #a9946e;
 }
 
+/* li - элемент списка, а здесь оно навешано на select */
 .change__lung__li {
   font-size: 15px;
   font-style: normal;
@@ -276,6 +288,7 @@
 
 /*MEDIA*/
 
+/* брейкпоинты точно нужно выносить в переменные */
 @media (max-width: 1230px) {
   .basic {
     margin-left: 45px;

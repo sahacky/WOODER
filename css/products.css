@@ -32,6 +32,8 @@
   right: -633px;
   z-index: 1;
 
+  /* у тебя везде один шрифт, зачем дублирование?
+  Можно на общий контентер или даже на body повесить главный стиль шрифта, а потом где надо - применять */
   font-family: "ProximaNova Bold";
   font-size: 170px;
   font-weight: bold;
@@ -48,6 +50,7 @@
   display: flex;
   justify-content: flex-end;
 
+  /* зачем ему абсолютное позиционирование */
   position: absolute;
   top: -118px;
 
@@ -124,6 +127,7 @@
 .furniture__subTittle {
   font-family: "ProximaNova Regular";
   font-size: 15px;
+  /* font-weight: normal можно не писать если на родителе нет другого */
   font-weight: normal;
   line-height: 25px;
 
@@ -220,6 +224,7 @@
   position: relative;
 }
 
+/* полоску можно и без картинки */
 .indent__img {
   margin: auto 0;
 }
@@ -371,7 +376,6 @@
 }
 
 .quality__subTittle {
-  margin: 0;
   font-family: "ProximaNova Regular";
   font-size: 15px;
   font-weight: normal;
@@ -517,7 +521,7 @@
   .furniture__tittle.double {
     align-self: center;
   }
-  
+
 
   .furniture__subTittle.double {
     margin-left: 0;
@@ -581,7 +585,7 @@
 
   .global__decor__products {
     top: -18px;
-    
+
   }
 
 
@@ -592,14 +596,14 @@
   /* .global__decor__products {
     top: -12px;
   } */
-  
+
 }
 
 @media (max-width: 770px) {
-  
+
   .global__decor__decor {
     display: none;
-  
+
   }
 
   .global__decor__Furniture {
@@ -649,14 +653,14 @@
 
   .quality__tittle {
     font-size: 27px;
-    
+
   }
 
   .quality__subTittle {
     font-size: 13px;
-    
+
   }
- 
+
   .quality__inner__tittle {
     margin-bottom: 15px;
   }
